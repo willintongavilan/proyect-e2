@@ -5,4 +5,5 @@ class Enfermero(models.model):
 	Nombre=models.CharField (max_length=20)
 	Apellido_1=models.CharField (max_length=20)
 	Apellido_2=models.CharField (max_length=20)
+	login =models.ForeignKey (login.related_model'login',on_delete=models.cascade)
 	
