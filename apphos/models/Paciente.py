@@ -1,7 +1,7 @@
 from django.db import models
 from proyect-e2.apphos.models.Historia_clinica import Historia_clinica
 
-class paciente(models.model):
+class Paciente(models.model):
      
  cedula_pac=models.CharField (primary_key=True)
  nombre = models.CharField (max_length=20)
