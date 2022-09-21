@@ -9,6 +9,6 @@ class Familiar(models.model):
     email=models.CharField (max_length=50)
     direccion=models.CharField (max_length=30)
     cedula_pac=models.CharField (max_length=10)
-    cedula_pac=  models.ForeignKey(Cedula_pac.related_model'Paciente',on_delete=models.cascade)
+    cedula_pac=  models.ForeignKey(Cedula_pac.related_model'paciente',on_delete=models.cascade)
 
 	
