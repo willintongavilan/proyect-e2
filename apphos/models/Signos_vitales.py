@@ -9,7 +9,7 @@ class paciente(models.model):
 	Frec_respirato=models.CharField (max_length=10)
 	Frec_cardiaca=models.CharField (max_length=20)
 	Temperatura=models.CharField (max_length=10)
-    Presion_arterial=models.CharField (max_length=10)
-    Glisemia=models.CharField (max_length=10)
+        Presion_arterial=models.CharField (max_length=10)
+        Glisemia=models.CharField (max_length=10)
 	Cedula_paciente=  models.ForeignKey(Cedula_paciente.related_model'paciente',on_delete=models.cascade)
 
