@@ -11,6 +11,7 @@ class paciente(models.model):
  direccion_pac=models.CharField (max_length=20)
  cedula_med=models.CharField (max_length=20)
  cedula_enfe=models.CharField (max_length=20)
+ numtel_pac=models.CharField (max_length=10)
  cedula_med=  models.ForeignKey (cedula_med.related_model'medico',on_delete=models.cascade)
  Historia_clinica=models.ForeignKey (Historia_clinica.related_model'Historia_clinica',on_delete=models.cascade)
  login =models.ForeignKey (login.related_model'login',on_delete=models.cascade)
