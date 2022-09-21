@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+
 from django.urls import path
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
-from authApp import views as views_auth
-from productApp import views as views_product
+from apphos import views as views_auth
+
 
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
@@ -28,5 +29,6 @@ urlpatterns = [
     path('product/<int:pk>/', views_product.product_detail_view)
     path('admin/', admin.site.urls),
     path('api/',include(router.urls))
-]
+    ]
 #127.0.0.1:8000/api/Paciente
+
