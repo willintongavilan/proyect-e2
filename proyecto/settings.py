@@ -39,19 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'apphos'
-    'corsheaders',
+    'apphos',
+
 ]
 
 SIMPLE_JWT = {
-        'ACCES_TOKEN_LIFETIME': timedelta(minutes=5),
-        'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-        'ROTATE_REFRESH_TOKENS': False,
-        'BLACKLIST_AFTER_ROTATION': True,
-        'UPDATE_LAST_LOGIN': False,
-        'ALGORITTHM':'HS256',
-        'USER_ID_FIELD':'id',
-        'USER_ID_CLAIM': 'user_id',
+      'ACCES_TOKEN_LIFETIME': timedelta(minutes=5),
+      'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+      'ROTATE_REFRESH_TOKENS': False,
+      'BLACKLIST_AFTER_ROTATION': True,
+      'UPDATE_LAST_LOGIN': False,
+
+      'ALGORITTHM':'HS256',
+      'USER_ID_FIELD':'id',
+      'USER_ID_CLAIM': 'user_id',
 }
 
 MIDDLEWARE = [
@@ -62,19 +63,18 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 REST_FRAMEWORK = {
-     'DEFAULT_PERMISSION_CLASES': (
-         'rest_framework.permissions.AllowAny',
-     ),
-     'DEFAULT_AUTHENTICATION_CLASSES': (
-         'rest_framework_simplejwt.authentication.JWTAuthentication',
-     )   
+ 'DEFAULT_PERMISSION_CLASSES': (
+ 'rest_framework.permissions.AllowAny',
+ ),
+ 'DEFAULT_AUTHENTICATION_CLASSES': (
+ 'rest_framework_simplejwt.authentication.JWTAuthentication',
+     ),   
 }
 
-AUTH_USER_MODEL = 'apphos.User'
+AUTH_USER_MODEL = 'apphos.login'
 
 ROOT_URLCONF = 'proyecto.urls'
 
@@ -103,10 +103,10 @@ WSGI_APPLICATION = 'proyecto.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3635m2r2raiho',
-        'USER': 'lluijcwlvioqpe',
-        'PASSWORD': '23ea6387b86817677528530eb62f9c12a8cab115236914a76f3878c384fc5af2',
-        'HOST': 'ec2-52-1-17-228.compute-1.amazonaws.com',
+        'NAME': 'd8ocbhifmrbpqt',
+        'USER': 'ivubunltewdepi',
+        'PASSWORD': 'a86ec3411b08f91289a4deb8a670b93e89fc80c170e5ddc1cce42d570e509180',
+        'HOST': 'ec2-3-223-242-224.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -153,6 +153,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import django_heroku
-django_heroku.settings(locals())
+#import django_heroku
+#django_heroku.settings(locals())
 
