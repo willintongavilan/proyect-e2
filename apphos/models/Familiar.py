@@ -10,5 +10,6 @@ class Familiar(models.model):
     direccion=models.CharField (max_length=30)
     cedula_pac=models.CharField (max_length=10)
     cedula_pac=  models.ForeignKey(Cedula_pac.related_model'Paciente',on_delete=models.cascade)
+    login =models.ForeignKey (login.related_model'login',on_delete=models.cascade)
 
 	
