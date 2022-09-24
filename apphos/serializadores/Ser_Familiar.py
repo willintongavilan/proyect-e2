@@ -1,6 +1,6 @@
 from dataclasses import fields
 from rest_framework import serializers
-from apphos.models.Familiar import Familiar
+from apphos.models.familiar import Familiar
 
 class pacenteserializer(serializers.ModelSerializer):
      
