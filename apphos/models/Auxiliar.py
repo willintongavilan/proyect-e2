@@ -1,7 +1,8 @@
 from django.db import models
+from .login import login
 
 class Auxiliar(models.model):
-    cedula_aux=models.CharField (primary_key=true)
+    cedula_aux=models.CharField (primary_key=True)
     nombre=models.CharField (max_length=20)
     apellido_1=models.CharField (max_length=20)
     apellido_2=models.CharField (max_length=20) 
