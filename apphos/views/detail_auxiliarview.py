@@ -26,3 +26,4 @@ class detailauxiliarview(APIView):
         snippet = Auxiliar.objects.get(pk=pk)
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
