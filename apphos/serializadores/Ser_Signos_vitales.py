@@ -1,6 +1,6 @@
 from dataclasses import fields
 from rest_framework import serializers
-from apphos.models.Signos_vitales import Signos_vitales
+from apphos.models.signos_vitales import Signos_vitales
 
 class pacenteserializer(serializers.ModelSerializer):
      
