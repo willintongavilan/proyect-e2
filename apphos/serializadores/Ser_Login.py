@@ -2,7 +2,7 @@ from dataclasses import fields
 from rest_framework import serializers
 from apphos.models.Login import login
 
-class pacenteserializer(serializers.ModelSerializer):
+class loginserializer(serializers.ModelSerializer):
      
  class Meta:
         model=login

@@ -11,6 +11,7 @@ class Familiar(models.model):
     celular=models.CharField (max_length=10)
     email=models.CharField (max_length=50)
     direccion=models.CharField (max_length=30)
+    cedula_pac=models.ForeignKey(Paciente,related_name='paciente',on_delete=models.CASCADE)
     login=models.ForeignKey(login, related_name='login', on_delete=models.CASCADE)
     Auxiliar = models.ForeignKey (Auxiliar, related_name='Auxiliar', on_delete=models.CASCADE)
     Paciente = models.ForeignKey (Paciente, related_name='Paciente', on_delete=models.CASCADE)
