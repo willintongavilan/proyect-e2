@@ -1,4 +1,6 @@
 from django.db import models
+from .Login import Login
+from .Paciente import Paciente
 
 class Familiar(models.model):
     cedula_fam=models.CharField (primary_key="true")
@@ -8,5 +10,5 @@ class Familiar(models.model):
     celular=models.CharField (max_length=10)
     email=models.CharField (max_length=50)
     direccion=models.CharField (max_length=30)
-    cedula_pac=  models.ForeignKey ("cedula_pac".related_model'paciente',on_delete=models.cascade)
+    
 	

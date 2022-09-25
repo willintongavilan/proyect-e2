@@ -12,5 +12,5 @@ class paciente(models.model):
  Temperatura=models.CharField (max_length=10)
  presion_arterial=models.CharField (max_length=10)
  Glisemia=models.CharField (max_length=10)
- cedula_paciente=  models.ForeignKey(paciente,related_name='paciente',on_delete=models.cascade
+ cedula_pac=models.ForeignKey(Paciente,related_name='paciente',on_delete=models.cascade
 
