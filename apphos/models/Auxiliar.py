@@ -1,5 +1,5 @@
 from django.db import models
-from .Login import login
+from apphos.models.Login import login
 
 class Auxiliar(models.model):
     cedula_aux=models.CharField (primary_key=True)
