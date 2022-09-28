@@ -23,8 +23,8 @@ urlpatterns = [
     path('refresh/', TokenRefreshView.as_view()),
     path('user/', views_auth.UserCreateView.as_view()),
     path('user/<int:pk>/', views_auth.UserDetailView.as_view()),
-    path('product/', views_product.product_api_view),
-    path('product/<int:pk>/', views_Apphos.apphos_detail_view),
+    path('apphos/', views_apphos.apphos_api_view),
+    path('apphos/<int:pk>/', views_apphos.apphos_detail_view),
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
     ]
