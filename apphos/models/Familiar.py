@@ -3,7 +3,7 @@ from apphos.models.Login import login
 from apphos.models.Paciente import Paciente
 from apphos.models.Auxiliar import Auxiliar
 
-class Familiar(models.model):
+class Familiar(models.Model):
     cedula_fam=models.CharField (primary_key="true")
     nombre=models.CharField (max_length=20)
     apellido_1=models.CharField (max_length=20)

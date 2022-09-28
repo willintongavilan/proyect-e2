@@ -24,9 +24,9 @@ urlpatterns = [
     path('user/', views_auth.UserCreateView.as_view()),
     path('user/<int:pk>/', views_auth.UserDetailView.as_view()),
     path('product/', views_product.product_api_view),
-    path('product/<int:pk>/', views_product.product_detail_view)
+    path('product/<int:pk>/', views_Apphos.apphos_detail_view),
     path('admin/', admin.site.urls),
-    path('api/',include(router.urls))
+    path('api/',include(router.urls)),
     ]
 #127.0.0.1:8000/api/Paciente
 

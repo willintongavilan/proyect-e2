@@ -1,7 +1,7 @@
 from django.db import models
 from apphos.models.Login import login
 
-class Auxiliar(models.model):
+class Auxiliar(models.Model):
     cedula_aux=models.CharField (primary_key=True)
     nombre=models.CharField (max_length=20)
     apellido_1=models.CharField (max_length=20)
