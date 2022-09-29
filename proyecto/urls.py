@@ -15,18 +15,31 @@ Including another URLconf
 
 from django.urls import path
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
-from apphos import views as views_auth
+from apphos import views
 
 
 urlpatterns = [
-    path('login/', TokenObtainPairView.as_view()),
-    path('refresh/', TokenRefreshView.as_view()),
-    path('user/', views_auth.UserCreateView.as_view()),
-    path('user/<int:pk>/', views_auth.UserDetailView.as_view()),
-    path('apphos/', views_apphos.apphos_api_view),
-    path('apphos/<int:pk>/', views_apphos.apphos_detail_view),
-    path('admin/', admin.site.urls),
-    path('api/',include(router.urls)),
+    path('login/', views.createloginview.as_view()),
+    path('Enfermero/', views.createenfermeroview.as_view()),   
+    path('Medico/', views.createmedicoview.as_view()),
+    path('Auxiliar/', views.createauxiliarview.as_view()),
+    path('Familiar/', views.createfamiliarview.as_view()),
+    path('Historia_clinica/', views.createhistoriaclinicaview.as_view()),
+    path('Paciente/', views.createpacienteview.as_view()),
+    path('Signos_vitales/', views.createsignosvitalesview.as_view()),
+   
+
+    path('login/<int:pk>/', views.detailloginview.as_view()),
+    path('Auxiliar/<int:pk>/', views.detailauxiliarview.as_view()),
+    path('Familiar/<int:pk>/', views.detailfamiliarview.as_view()),
+    path('Historia_clinica/<int:pk>/', views.detailhistoriaclinicaview.as_view()),
+    path('Signos_vitales/<int:pk>/', views.detailsignosvitalessview.as_view()),
+    path('Paciente/<int:pk>/', views.detailpacienteview.as_view()),
+    path('Medico/<int:pk>/', views.detailmedicoview.as_view()),
+    path('Enfermero/<int:pk>/', views.detailenfermeroview.as_view()),
+    
+
+
     ]
 #127.0.0.1:8000/api/Paciente
 
