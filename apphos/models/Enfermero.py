@@ -7,7 +7,7 @@ from apphos.models.Login import login
 
 
 class Enfermero(models.Model):
-    cedula_enfe=models.CharField (primary_key=True)
+    cedula_enfe=models.CharField (primary_key=True,max_length=40)
     nombre=models.CharField (max_length=20)
     apellido_1=models.CharField (max_length=20)
     apellido_2=models.CharField (max_length=20)

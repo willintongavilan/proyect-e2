@@ -31,7 +31,7 @@ class UserManager(BaseUserManager):
 class login(AbstractBaseUser, PermissionsMixin):
 
     id = models.BigAutoField(primary_key=True)
-    username = models.CharField('Username', max_length = 15, unique=True)
+    username = models.CharField('Username', max_length = 50, unique=True)
     password = models.CharField('Password', max_length = 256)
  
 

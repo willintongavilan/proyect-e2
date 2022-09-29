@@ -7,13 +7,13 @@ from apphos.models.Paciente import Paciente
 
 class Historia_clinica(models.Model):
     
-   id_historia=models.CharField (primary_key=True)
+   id_historia=models.CharField (primary_key=True,max_length=40)
    diagnostico=models.CharField (max_length=1000)
    sugerencia=models.CharField (max_length=1000)
-   cedula_paciente=models.CharField (max_length=10)
-   cedula_paciente= models.ForeignKey (Paciente, related_name='paciente',on_delete=models.CASCADE)
+   cedula_paciente=models.CharField (max_length=20)
+   cedula_paciente= models.ForeignKey (Paciente, related_name='Historia_clinica',on_delete=models.CASCADE)
    
-   Familiar = models.ForeignKey (Familiar, related_name='Familiar',on_delete=models.CASCADE)
-   Medico = models.ForeignKey (Medico, related_name='Medico', on_delete=models.CASCADE)
+   Familiar = models.ForeignKey (Familiar, related_name='Historia_clinica',on_delete=models.CASCADE)
+   Medico = models.ForeignKey (Medico, related_name='Historia_clinica', on_delete=models.CASCADE)
  
    
